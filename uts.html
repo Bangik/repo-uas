@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Latihan Dengan Objek</title>
+    <meta charset="utf-8">
+    <style>
+      #h1{
+        text-align: center;
+      }
+      body{
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .tombolkirim{
+        margin-left: 80px;
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+      }
+      .tombolkirim:hover {
+        background-color: #e7e7e7;
+      }
+      #h3{
+        margin-left: 80px;
+      }
+      .out{
+        border-style: none;
+        text-align: center;
+        background: transparent;
+      }
+      #tableoutput{
+        display: none;
+      }
+      td{
+        text-align: center;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1 id="h1">DATA NILAI MAHASISWA <br>POLITEKNIK NEGERI JEMBER</h1> <hr>
+      <PRE>
+        NIM Mahasiswa   : <input type="text" size="25" id="NIM" placeholder="NIM">
+        Nama Mahasiswa  : <input type="text" size="25" id="nama" placeholder="Nama">
+        Nilai Tugas 1   : <input type="text" size="25" id="tugas1" placeholder="Tugas 1">
+        Nilai Tugas 2   : <input type="text" size="25" id="tugas2" placeholder="Tugas 2">
+        Nilai UTS       : <input type="text" size="25" id="uts" placeholder="UTS">
+        Nilai UAS       : <input type="text" size="25" id="uas" placeholder="UAS">
+      </PRE>
+      <BR>
+        <input class="tombolkirim" type="button" value="Tampilkan Hasil" onclick="tekan()">
+        <input class="tombolkirim" type="reset" value="Input Mahasiswa Lain" onclick="tekan2()">
+    </form>
+    <table border="1" align="center" id="tableoutput" width="60%">
+      <tr>
+        <th> NIM </th>
+        <th> Nama </th>
+        <th> Nilai Tugas 1 </th>
+        <th> Nilai Tugas 2 </th>
+        <th> Nilai UTS </th>
+        <th> Nilai UAS </th>
+        <th> Nilai Rata - Rata </th>
+        <th> Predikat </th>
+        <th> Status </th>
+      </tr>
+    </table>
+    <script>
+      function tekan(){
+        var nim = (document.getElementById("NIM").value); //variabel untuk NIM
+        var nama = (document.getElementById("nama").value); //variabel untuk nama
+        var ntugas1 = parseInt(document.getElementById("tugas1").value); //variabel nilai tugas 1
+        var ntugas2 = parseInt(document.getElementById("tugas2").value); //variabel nilai tugas 2
+        var nuts = parseInt(document.getElementById("uts").value); //variabel nilai tugas 2
+        var nuas = parseInt(document.getElementById("uas").value); //variabel nilai tugas 2
+        var jml = ntugas1 + ntugas2 + nuts + nuas //variabel jumlah untuk menghitung rata rata
+        var huruf = "" //variabel huruf
+        var status = "" // variabel status
+        var rata2 = jml / 4 //rumus menghitung rata rata
+        if (nim != "" && nama != "" && rata2<100){ //pengecekan inputan
+          var tableo = (document.getElementById("tableoutput").style.display = "block"); //untuk tampilkan display css
+        }
+        else{
+          alert("Anda harus mengisi data dengan lengkap dan benar !")
+        }
+          if (rata2 >= 85){ //pengecekan nilai
+            huruf = "A";
+            status = "LULUS";
+          }
+          else if(rata2 >=70){
+            huruf = "B";
+            status = "LULUS";
+          }
+          else if (rata2 >=60) {
+            huruf = "C";
+            status = "LULUS";
+          }
+          else if (rata2 >=50) {
+            huruf = "D"
+            status = "TIDAK LULUS"
+          }
+          else {
+            huruf = "E";
+            status = "TIDAK LULUS ";
+          }
+        var keluaran = document.getElementById("tableoutput"); //output menggunakan id
+        var trow = keluaran.insertRow(1);
+        var tcel1 = trow.insertCell(0);
+        var tcel2 = trow.insertCell(1);
+        var tcel3 = trow.insertCell(2);
+        var tcel4 = trow.insertCell(3);
+        var tcel5 = trow.insertCell(4);
+        var tcel6 = trow.insertCell(5);
+        var tcel7 = trow.insertCell(6);
+        var tcel8 = trow.insertCell(7);
+        var tcel9 = trow.insertCell(8);
+
+        tcel1.innerHTML = nim;
+        tcel2.innerHTML = nama;
+        tcel3.innerHTML = ntugas1;
+        tcel4.innerHTML = ntugas2;
+        tcel5.innerHTML = nuts;
+        tcel6.innerHTML = nuas;
+        tcel7.innerHTML = rata2;
+        tcel8.innerHTML = huruf;
+        tcel9.innerHTML = status;
+      }
+    </script>
+    <pre>
+      Nama : Achmad Dinofaldi Firmansyah
+      NIM  : E41191882
+      Prodi: TIF - Internasional
+    </pre>
+  </body>
+</html>

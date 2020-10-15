@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Mahasiswa</title>
+    <meta charset="utf-8">
+    <style>
+      #h1{
+        text-align: center;
+      }
+      body{
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      #tkirim{
+        margin-left: 80px;
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+      }
+      #tkirim:hover {
+        background-color: #e7e7e7;
+      }
+      #tulang{
+        background-color: white;
+        color: black;
+        border: 2px solid #e7e7e7;
+      }
+      #tulang:hover {
+        background-color: #e7e7e7;
+      }
+      #h3{
+        margin-left: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function tekan(){
+        var nimstr = (document.getElementById("NIM").value); //variabel nim
+        var namastr = (document.getElementById("nama").value); //variabel nama
+        var jk = (document.getElementById("JenisKelamin").value); //variabel jenis Kelamin
+        var agamastr = (document.getElementById("agama").value); //variabel agama
+        var statusstr = document.fform.status.value //variabel status
+        var prodistr = (document.getElementById("Prodi").value); //variabel prodi
+        var komentarstr = (document.getElementById("komentar").value); //variabel komentar
+        document.getElementById("NIMO").value = nimstr; //output NIM
+        document.getElementById("namao").value = namastr; //output nama
+        document.getElementById("JenisKelamino").value = jk; //output JenisKelamin
+        document.getElementById("agamao").value = agamastr; //output agama
+        document.getElementById("statuso").value = statusstr; //output status
+        document.getElementById("prodio").value = prodistr; //output prodi
+        document.getElementById("komentaro").value = komentarstr; //output komentar
+      }
+    </script>
+    <form name ="fform">
+      <h1 id="h1">DATA MAHASISWA <br>Jurusan Teknologi Informasi <br>POLITEKNIK NEGERI JEMBER</h1> <hr>
+      <PRE>
+        NIM           : <input type="text" size="25" id="NIM" placeholder="NIM">
+        Nama          : <input type="text" size="25" id="nama" placeholder="Nama">
+        Jenis Kelamin : <select class="select" id="JenisKelamin">
+                          <option value ="Laki - Laki"> Laki - Laki </option>
+                          <option value ="Perempuan"> Perempuan </option>
+                        </select>
+        Agama         : <select class="select" id="agama">
+                          <option value ="Islam"> Islam </option>
+                          <option value ="Kristen"> Kristen </option>
+                          <option value ="Katolik"> Katolik </option>
+                          <option value ="Hindu"> Hindu </option>
+                          <option value ="Budha"> Budha </option>
+                          <option value ="Konghuchu"> Konghuchu</option>
+                        </select>
+        Status        : <input type="radio" name="status" value="Kawin" checked> Kawin
+                        <input type="radio" name="status" value="Belum Kawin"> Belum Kawin
+        Prodi         : <select class="select" id="Prodi">
+                          <option value ="Teknik Informatika"> Teknik Informatika </option>
+                          <option value ="Teknik Informatika - Kelas Internasional"> Teknik Informatika - Kelas Internasional </option>
+                          <option value ="Teknik Informatika - Kampus Bondowoso"> Teknik Informatika - Kampus Bondowoso</option>
+                          <option value ="Management Informatika"> Management Informatika </option>
+                          <option value ="Management Informatika - Kelas Internasional"> Management Informatika - Kelas Internasional </option>
+                          <option value ="Teknik Komputer"> Teknik Komputer </option>
+                        </select>
+        Komentar      : <textarea id="komentar" rows="3" cols="30" placeholder="komentar"></textarea>
+      </PRE>
+      <BR>
+        <input id="tkirim" type="button" value="kirim" onclick="tekan()">
+        <input id="tulang" type="reset" value="ulang">
+        <H3 id="h3">Output Data</H3>
+      <PRE>
+        NIM           : <input type="text" size="40" id="NIMO" disabled>
+        Nama          : <input type="text" size="40" id="namao" disabled>
+        Jenis Kelamin : <input type="text" size="40" id="JenisKelamino" disabled>
+        Agama         : <input type="text" size="40" id="agamao" disabled>
+        Status        : <input type="text" size="40" id="statuso" disabled>
+        Prodi         : <input type="text" size="40" id="prodio" disabled>
+        Komentar      : <textarea name="Ket" id="komentaro"rows="3" cols="41" disabled></textarea>
+      </pre>
+      <br>
+      <pre>
+        Nama  : Achmad Dinofaldi Firmansyah
+        NIM   : E41191882
+        prodi : TIF - Internasional
+    </form>
+  </body>
+</html>

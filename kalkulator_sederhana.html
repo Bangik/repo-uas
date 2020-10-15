@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <title>Memasukkan Bilangan</title>
+    <style>
+    body{
+      background: #2980B9;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    </style>
+  </head>
+  <body>
+    <pre>
+      Nama : Achmad Dinofaldi Firmansyah
+      NIM  : E41191882
+      Prodi: Teknik Informatika - Internasional
+    </pre>
+    <script>
+      function jumlah(){
+        var bil1 = parseFloat(document.getElementById("bilangan1").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+        var bil2 = parseFloat(document.getElementById("bilangan2").value);
+        if (isNaN (bil2))
+          bil2=0.0;
+          var hasil = bil1 + bil2;
+            alert ("Hasil Penjumlahan = " + hasil);
+      }
+      function kurang(){
+        var bil1 = parseFloat(document.getElementById("bilangan1").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+        var bil2 = parseFloat(document.getElementById("bilangan2").value);
+        if (isNaN (bil2))
+          bil2=0.0;
+          var hasil2 = bil1 - bil2;
+            alert ("Hasil pengurangan = " + hasil2);
+      }
+      function kali(){
+        var bil1 = parseFloat(document.getElementById("bilangan1").value);
+          if (isNaN (bil1))
+            bil1=0.0;
+        var bil2 = parseFloat(document.getElementById("bilangan2").value);
+          if (isNaN (bil2))
+            bil2=0.0;
+            var hasil3 = bil1 * bil2;
+              alert ("Hasil perkalian = " + hasil3);
+      }
+      function bagi(){
+        var bil1 = parseFloat(document.getElementById("bilangan1").value);
+          if (isNaN (bil1))
+            bil1=0.0;
+        var bil2 = parseFloat(document.getElementById("bilangan2").value);
+          if (isNaN (bil2))
+            bil2=0.0;
+            var hasil4 = bil1 / bil2;
+              alert ("Hasil Pembagian = " + hasil4);
+      }
+    </script>
+    <form>
+      <h1>Kalkulator Sederhana</h1>
+      <pre>
+        Angka Pertama :<input type="text" size="11" id="bilangan1" placeholder="input angka">
+        Angka Kedua   :<input type="text" size="11" id="bilangan2" placeholder="input angka">
+      </pre>
+      <INPUT type="button" value="+" onclick="jumlah()">
+      <input type="button" value="-" onclick="kurang()">
+      <input type="button" value="x" onclick="kali()">
+      <input type="button" value="/" onclick="bagi()">
+      <INPUT type="reset" value="Reset">
+    </form>
+  </body>
+</HTML>

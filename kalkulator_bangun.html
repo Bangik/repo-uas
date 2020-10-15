@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<HTML>
+  <head>
+    <title>Memasukkan Bilangan</title>
+    <style>
+    body{
+      background: #2980B9;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    </style>
+  </head>
+  <BODY>
+    <div>
+      <pre>
+          Nama : Achmad Dinofaldi Firmansyah
+          NIM  : E41191882
+          Prodi: Teknik Informatika - Internasional
+      </pre>
+    </div>
+    <SCRIPT>
+    function kellpers() { //fungsi Keliling Persegi
+      var bil1 = parseFloat(document.getElementById("panjangpersegi").value); //memanggil id dari input
+      if (isNaN (bil1))
+        bil1=0.0;
+        var hasil = bil1 * 4; //rumus Keliling persegi
+          alert ("Keliling Persegi = " + hasil);
+    }
+    function luaspers() { //fungsi luas persegi
+      var bil1 = parseFloat(document.getElementById("panjangpersegi").value);
+      if (isNaN (bil1))
+        bil1=0.0;
+        var hasil2 = bil1 * bil1; //rumus luas persegi
+          alert ("Luas Persegi = " + hasil2);
+    }
+    function kellbun() { //fungsi Keliling Lingkaran
+      var bil1 = parseFloat(document.getElementById("jarilingkaran").value); //memanggil id dari input
+      if (isNaN (bil1))
+        bil1=0.0;
+        var hasil = bil1 * 2 * Math.PI; //rumus Keliling Lingkaran
+          alert ("Keliling Lingkaran = " + hasil);
+    }
+    function luasbun() { //fungsi Keliling Lingkaran
+      var bil1 = parseFloat(document.getElementById("jarilingkaran").value); //memanggil id dari input
+      if (isNaN (bil1))
+        bil1=0.0;
+        var hasil = bil1 * bil1 * Math.PI; //rumus luas Lingkaran
+          alert ("Luas Lingkaran = " + hasil);
+    }
+    function kellkub() {  //fungsi Keliling Kubus
+      var bil1 = parseFloat(document.getElementById("sisikubus").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+          var hasil3 = bil1 * 12; //rumus Keliling Kubus
+            alert ("Keliling Kubus = " + hasil3);
+    }
+    function Luaskub() {  //fungsi Luas Kubus
+      var bil1 = parseFloat(document.getElementById("sisikubus").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+          var hasil4 = bil1 * bil1 * 6; // rumus Volume Kubus
+            alert ("Luas Kubus = " + hasil4);
+    }
+    function Volkub() {  //fungsi Volume Kubus
+      var bil1 = parseFloat(document.getElementById("sisikubus").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+          var hasil5 = bil1 * bil1 * bil1; // rumus Volume Kubus
+            alert ("Volume Kubus = " + hasil5);
+    }
+    function Luastab() {  //fungsi Luas Tabung
+      var bil1 = parseFloat(document.getElementById("jaritabung").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggitabung").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var hasil6 = Math.PI * 2 * bil1 * (bil1 + bil2); // rumus Luas Tabung
+            alert ("Luas Tabung = " + hasil6);
+    }
+    function Voltab() {  //fungsi Volume Tabung
+      var bil1 = parseFloat(document.getElementById("jaritabung").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggitabung").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var hasil6 = Math.PI * bil1 * bil1 * bil2; // rumus Volume Tabung
+            alert ("Volume Tabung = " + hasil6);
+    }
+    function Luasker() {  //fungsi Luas Kerucut
+      var bil1 = parseFloat(document.getElementById("jarikerucut").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggikerucut").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var sisimiring = Math.sqrt(bil1**2 + bil2**2)
+          var hasil6 = Math.PI * bil1 * (bil1 + sisimiring); // rumus Luas Kerucut
+            alert ("Luas Kerucut = " + hasil6);
+    }
+    function Volker() {  //fungsi Volume Kerucut
+      var bil1 = parseFloat(document.getElementById("jarikerucut").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggikerucut").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var hasil6 = 1/3 * Math.PI * bil1 * bil1 * bil2; // rumus Volume Kerucut
+            alert ("Volume Kerucut = " + hasil6);
+    }
+    function Luaslim() {  //fungsi Luas Limas
+      var bil1 = parseFloat(document.getElementById("sisilimas").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggilimas").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var setengah_sisi = bil1 / 2
+          var tinggi_segitiga = Math.sqrt(setengah_sisi**2 + bil2**2)
+          var luas_persegi = bil1 * bil1
+          var luas_selimut = 4 * 1/2 * bil1 * tinggi_segitiga
+          var hasil6 = luas_persegi + luas_selimut; // rumus luas limas
+            alert ("Luas Limas Segi Empat = " + hasil6);
+    }
+    function Vollim() {  //fungsi Volume Limas
+      var bil1 = parseFloat(document.getElementById("sisilimas").value);
+        if (isNaN (bil1))
+          bil1=0.0;
+      var bil2 = parseFloat(document.getElementById("tinggilimas").value);
+        if (isNaN (bil1))
+          bil2=0.0;
+          var luas_persegi = bil1 * bil1
+          var hasil6 = 1/3 * luas_persegi * bil2; // rumus Volume limas
+            alert ("Volume Limas Segi Empat = " + hasil6);
+    }
+    </SCRIPT>
+      <FORM>
+        <H1>Kalkulator Bangun</H1>
+        <dl>
+          <dt> Persegi </dt>
+          <dd>
+            Sisi :<input type="text" size="11" id="panjangpersegi" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            <INPUT TYPE="button" value="Keliling" onclick="kellpers()">
+            <INPUT TYPE="button" value="Luas" onclick="luaspers()">
+          </dd>
+          <dt> Lingkaran </dt>
+          <dd>
+            Jari - jari :<input type="text" size="11" id="jarilingkaran" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"><br>
+            <INPUT TYPE="button" value="Keliling" onclick="kellbun()">
+            <INPUT TYPE="button" value="Luas" onclick="luasbun()">
+          </dd>
+          <dt> Kubus </dt>
+          <dd>
+            Sisi :<input type="text" size="11" id="sisikubus" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            <INPUT TYPE="button" value="Keliling" onclick="kellkub()">
+            <INPUT TYPE="button" value="Luas" onclick="Luaskub()">
+            <INPUT TYPE="button" value="Volume" onclick="Volkub()">
+          </dd>
+          <dt> Tabung </dt>
+          <dd>
+            Jari - jari :<input type="text" size="11" id="jaritabung" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            Tinggi     :<input type="text" size="11" id="tinggitabung" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            <INPUT TYPE="button" value="Luas" onclick="Luastab()">
+            <INPUT TYPE="button" value="Volume" onclick="Voltab()">
+          </dd>
+          <dt> Kerucut </dt>
+          <dd>
+            jari - jari :<input type="text" size="11" id="jarikerucut" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            Tinggi   :<input type="text" size="11" id="tinggikerucut" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"><br>
+            <INPUT TYPE="button" value="Luas" onclick="Luasker()">
+            <INPUT TYPE="button" value="Volume" onclick="Volker()">
+          </dd>
+          <dt> Limas segi empat </dt>
+          <dd>
+            Sisi :<input type="text" size="11" id="sisilimas" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            Tinggi   :<input type="text" size="11" id="tinggilimas" onkeypress="return event.charCode >= 48 && event.charCode <=57" placeholder="input angka"> <br>
+            <INPUT TYPE="button" value="Luas" onclick="Luaslim()">
+            <INPUT TYPE="button" value="Volume" onclick="Vollim()">
+          </dd>
+        </dl>
+      </form>
+    </body>
+</HTML>

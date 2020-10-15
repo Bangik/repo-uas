@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alert Sesuai Waktu Komputer</title>
+    <style>
+      body{
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Latihan Objek Date pada JavaScript</h1>
+    <script>
+      var tanggalan = new Date();
+      var hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+      var bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"]
+      var thisday = hari[tanggalan.getDay()];
+      var thisdate = tanggalan.getDate();
+      var thismonth = bulan[tanggalan.getMonth()];
+      var thisyears = tanggalan.getFullYear();
+      var thishour = tanggalan.getHours();
+      var thisminute = tanggalan.getMinutes();
+      var thissecond = tanggalan.getSeconds();
+
+
+      if(thishour >=4 && thishour <=10){
+        alert("Selamat Pagi")
+        document.write("<font size=5>")
+        document.write("Selamat Pagi ... <br>");
+        document.write("Sekarang Hari " + thisday + "<br>");
+        document.write("Tanggal " + thisdate + " " + thismonth + " " + thisyears + "<br>");
+        document.write("Pukul " + thishour + "." + thisminute + "." + thissecond);
+      }
+      else if (thishour >=10 && thishour <=14) {
+        alert("Selamat Siang")
+        document.write("<font size=5>")
+        document.write("Selamat Siang ... <br>");
+        document.write("Sekarang Hari " + thisday + "<br>");
+        document.write("Tanggal " + thisdate + " " + thismonth + " " + thisyears + "<br>");
+        document.write("Pukul " + thishour + "." + thisminute + "." + thissecond);
+      }
+      else if (thishour >=14 && thishour <=18) {
+        alert("Selamat Sore")
+        document.write("<font size=5>")
+        document.write("Selamat Sore ... <br>");
+        document.write("Sekarang Hari " + thisday + "<br>");
+        document.write("Tanggal " + thisdate + " " + thismonth + " " + thisyears + "<br>");
+        document.write("Pukul " + thishour + "." + thisminute + "." + thissecond);
+      }
+      else {
+        alert("Selamat Malam")
+        document.write("<font size=5>")
+        document.write("Selamat Malam ... <br>");
+        document.write("Sekarang Hari " + thisday + "<br>");
+        document.write("Tanggal " + thisdate + " " + thismonth + " " + thisyears + "<br>");
+        document.write("Pukul " + thishour + "." + thisminute + "." + thissecond);
+      }
+    </script>
+  </body>
+</html>
